@@ -208,7 +208,7 @@ class WithStatelessBridge extends Config(
   (pname,site,here,up) => pname match {
 /* !!! FIXME
     case BankedL2Config => up(BankedL2Config, site).copy(coherenceManager = { case (_, _) =>
-      val pass = LazyModule(new TLBuffer(0))
+      val pass = LazyModule(new TLBuffer(0)(site))
       (pass.node, pass.node)
     })
 */
